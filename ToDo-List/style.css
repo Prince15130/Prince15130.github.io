@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #4f77b4, #85c7fd);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(131, 113, 113);
+}
+
+form button {
+  color: #f6d365;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #f6d365;
+  color: black;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  border-radius: 0.5rem;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+}
+.todo li {
+  flex: 1;
+}
+
+.trsh-btn,
+.comp-btn {
+  background-color: #fd8c6c;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.comp-btn {
+  background: rgb(149, 223, 120);
+}
+.comp-btn:hover {
+  background: green;
+}
+.trsh-btn:hover {
+  background: #ff5c2e;
+}
+
+.todo-item {
+  padding: 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.sort-az,
+.sort-za,
+.checkAll,
+.deleteAll {
+  background-color: #fd8c6c;
+  color: white;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.22),
+    rgba(255, 255, 255, 0.25)
+  );
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+}
+.sort-az,
+.sort-za,
+.checkAll,
+.deleteAll {
+  background-color: #fd8c6c;
+}
+.sort-az:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.22),
+    rgba(255, 255, 255, 0.25)
+  );
+  background-color: #f6d365;
+}
+.sort-za:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.22),
+    rgba(255, 255, 255, 0.25)
+  );
+  background-color: #f6d365;
+}
+.checkAll:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.22),
+    rgba(255, 255, 255, 0.25)
+  );
+  background-color: #f6d365;
+}
+.deleteAll:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.22),
+    rgba(255, 255, 255, 0.25)
+  );
+  background-color: #f6d365;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: orange;
+  width: 9rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #fd8c6c;
+  top: 0;
+  right: 0;
+  padding: 0.9rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #fd8c6c;
+}
