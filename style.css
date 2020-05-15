@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  color: #555;
+  background: #222;
+  text-align: center;
+  font-family: "Roboto Mono";
+  padding: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.img {
+  width: 300px;
+  height: 200px;
+  border-radius: 40px;
+}
+.card {
+  transition: 0.3s ease;
+  border-radius: 41px;
+  color: #333;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+  width: 300px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
