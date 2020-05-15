@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="password.js" defer></script>
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Password Generator</h1>
+      <div class="character-amount-container">
+        <span class="alert" id="alert"></span>
+        <h3 class="password-display" id="passwordDisplay">Password</h3>
+        <button class="btn" id="copy">
+          <i class="fa fa-files-o" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="strength-meter" id="strength-meter"></div>
+      <form class="form" id="passwordForm">
+        <label for="characterNumber">Password Range</label>
+        <div class="character-amount-container">
+          <input type="range" min="1" max="50" value="10" id="characterRange" />
+          <input
+            type="number"
+            min="1"
+            max="50"
+            value="10"
+            id="characterNumber"
+            class="number-input"
+          />
+        </div>
+        <label for="includeUpper">Include Uppercase Letters</label>
+        <input type="checkbox" id="includeUpper" />
+
+        <label for="includeLower">Include Lowercase Letters</label>
+        <input type="checkbox" id="includeLower" />
+
+        <label for="includeNumbers">Include Numbers</label>
+        <input type="checkbox" id="includeNumbers" />
+
+        <label for="includeSymbols">Include Symbols</label>
+        <input type="checkbox" id="includeSymbols" />
+
+        <button type="submit" class="button-display">Generate Password</button>
+      </form>
+      <div id="reasons" class="reasons"></div>
+    </div>
+  </body>
+</html>

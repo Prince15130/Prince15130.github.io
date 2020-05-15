@@ -1,0 +1,159 @@
+body {
+  background-color: #222;
+  margin: 0;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.container {
+  background-color: #333333;
+  padding: 3rem;
+  border-radius: 1rem;
+  border: 2px solid #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  perspective: 1000px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+.character-amount-container {
+  display: flex;
+  align-items: center;
+}
+
+.number-input {
+  width: 2.2rem;
+}
+
+.password-display {
+  background-color: white;
+  color: black;
+  padding: 1 rem;
+  border: 2px solid rgb(131, 113, 113);
+  height: 2rem;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  border-radius: 0.5rem;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  padding: 1 rem;
+  border: 2px solid rgb(131, 113, 113);
+  height: 2.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: rgb(185, 138, 138);
+}
+
+.alert {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1 rem;
+  border: 2px solid rgb(131, 113, 113);
+  height: 2rem;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  border-radius: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.fail {
+  background: rgb(230, 0, 35, 0.9);
+  color: white;
+  opacity: 1;
+}
+
+.success {
+  background: rgba(19, 238, 103, 0.9);
+  color: black;
+  opacity: 1;
+}
+
+.button-display {
+  grid-column: span 2;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.button-display:hover {
+  background-color: rgb(134, 100, 100);
+}
+
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+
+.strength-meter {
+  --strength: 0;
+  --bgColor: "";
+  position: relative;
+  height: 2rem;
+  width: 90%;
+  border: 3px solid hsl(261, 88%, 57%);
+  border-radius: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.strength-meter::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(1% * var(--strength, 0));
+  background-color: var(--bgColor);
+
+  transition: width 200ms;
+}
+
+.reasons > * {
+  margin-top: 0.5rem;
+  color: goldenrod;
+}
